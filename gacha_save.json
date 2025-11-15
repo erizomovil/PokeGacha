@@ -1,0 +1,96 @@
+{
+  "pity_legendario_contador": 6,
+  "pity_raro_contador": 6,
+  "tipos_activos": [
+    "Fuego 🔥",
+    "Agua 💧",
+    "Planta 🌿",
+    "Eléctrico ⚡",
+    "Volador 🕊️",
+    "Tierra ⛰️",
+    "Normal ⭐",
+    "Hielo ❄️",
+    "Lucha 🥊",
+    "Veneno 💀",
+    "Bicho 🐞",
+    "Roca 🗿",
+    "Fantasma 👻",
+    "Dragón 🐉",
+    "Siniestro 🌑",
+    "Acero ⚙️",
+    "Hada ✨"
+  ],
+  "tipos_con_maestria": [],
+  "resultados_previos": [
+    {
+      "nombre": "Rookidee",
+      "tipos": [
+        "Volador 🕊️"
+      ],
+      "rareza": "comun"
+    },
+    {
+      "nombre": "Cetoddle",
+      "tipos": [
+        "Hielo ❄️"
+      ],
+      "rareza": "comun"
+    },
+    {
+      "nombre": "Bergmite",
+      "tipos": [
+        "Hielo ❄️"
+      ],
+      "rareza": "comun"
+    },
+    {
+      "nombre": "Spectrier",
+      "tipos": [
+        "Fantasma 👻"
+      ],
+      "rareza": "legendario"
+    },
+    {
+      "nombre": "Purrloin",
+      "tipos": [
+        "Siniestro 🌑"
+      ],
+      "rareza": "comun"
+    },
+    {
+      "nombre": "Magby",
+      "tipos": [
+        "Fuego 🔥"
+      ],
+      "rareza": "comun"
+    },
+    {
+      "nombre": "Wiglett",
+      "tipos": [
+        "Agua 💧"
+      ],
+      "rareza": "comun"
+    },
+    {
+      "nombre": "Seel",
+      "tipos": [
+        "Agua 💧"
+      ],
+      "rareza": "comun"
+    },
+    {
+      "nombre": "Seviper",
+      "tipos": [
+        "Veneno 💀"
+      ],
+      "rareza": "comun"
+    },
+    {
+      "nombre": "Nosepass",
+      "tipos": [
+        "Roca 🗿"
+      ],
+      "rareza": "comun"
+    }
+  ]
+}

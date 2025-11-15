@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pokémon Gacha Simulator</title>
+    <style>
+        /* Estilos básicos */
+        body { font-family: sans-serif; padding: 20px; background-color: #f8f9fa; }
+        h1, h2, h3 { color: #343a40; }
+        hr { margin: 25px 0; border: 0; border-top: 1px solid #dee2e6; }
+        
+        /* Pity Bars */
+        .pity-bar-container { width: 100%; background: #e9ecef; height: 10px; border-radius: 5px; margin: 5px 0; overflow: hidden; }
+        .pity-bar-legendario { height: 100%; background: #e91e63; transition: width 0.3s; } /* Rojo para Legendario */
+        .pity-bar-raro { height: 100%; background: #ffc107; transition: width 0.3s; } /* Amarillo para Raro */
+        
+        /* Controles de Tipos/Comandos */
+        #type-controls { margin-top: 15px; }
+        .type-control { border: 1px solid #ccc; padding: 10px; margin-bottom: 5px; display: flex; justify-content: space-between; align-items: center; background-color: white; border-radius: 4px; }
+        .type-control button { margin-left: 10px; padding: 5px 10px; cursor: pointer; border: none; border-radius: 4px; font-weight: bold; }
+        .type-control button.add { background-color: #28a745; color: white; }
+        .type-control button.remove { background-color: #dc3545; color: white; }
+        
+        /* Resultados */
+        #results-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; margin-top: 15px; }
+        .pokemon-card { padding: 10px; border-radius: 5px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .comun { background-color: #e0f7fa; border: 1px solid #00bcd4; }
+        .raro { background-color: #fffde7; border: 1px solid #ffeb3b; }
+        .legendario { background-color: #fce4ec; border: 2px solid #e91e63; color: #880e4f; }
+    </style>
+</head>
+<body>
+    <h1>Pokémon Gacha Simulator 🔮</h1>
+    <hr>
+
+    <section>
+        <h2>Tirar Gacha</h2>
+        <input type="number" id="pull-count" value="10" min="1" max="100" style="padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+        <button id="pull-button" style="padding: 8px 15px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer;">Tirar</button>
+        
+        <h3>Pity Legendario: <span id="pity-legendario-display">0 / 90</span></h3>
+        <div class="pity-bar-container"><div id="pity-legendario-bar" class="pity-bar-legendario" style="width: 0%;"></div></div>
+        
+        <h3>Pity Raro Garantizado: <span id="pity-raro-display">0 / 10</span></h3>
+        <div class="pity-bar-container"><div id="pity-raro-bar" class="pity-bar-raro" style="width: 0%;"></div></div>
+        
+        <p>
+            <button id="reset-button" style="padding: 8px 15px;">Reseteo</button>
+            <input type="number" id="pity-input" placeholder="Pity Legendario 0-90" min="0" max="90" style="width: 150px; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+            <button id="set-pity-button" style="padding: 8px 15px;">Ajustar Pity</button>
+            <button id="clear-history-button" style="padding: 8px 15px; background-color: #6c757d; color: white; border: none; border-radius: 4px; cursor: pointer; margin-left: 10px;">
+                Borrar Historial
+            </button>
+        </p>
+        <p style="margin-top: 20px; border-top: 1px dashed #ccc; padding-top: 15px;">
+            <strong>Tiradas Garantizadas (NO Afecta Pity):</strong><br>
+            <button id="pull-raro-guaranteed" style="padding: 8px 15px; background-color: #ffc107; color: black; border: none; border-radius: 4px; cursor: pointer; margin-right: 10px;">
+                Tirada Raro Garantizado
+            </button>
+            <button id="pull-legendario-guaranteed" style="padding: 8px 15px; background-color: #6f42c1; color: white; border: none; border-radius: 4px; cursor: pointer;">
+                Tirada Legendario Garantizado
+            </button>
+        </p>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Resultados Obtenidos</h2>
+        <div id="results-grid">
+            </div>
+    </section>
+    
+    <hr>
+
+    <section>
+        <h2>Control de Tipos</h2>
+        <p id="pity-display-text" style="margin-bottom: 15px;"></p>
+        <div id="type-controls">
+            </div>
+    </section>
+
+    <script src="./renderer.js"></script>
+</body>
+</html>
