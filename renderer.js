@@ -278,6 +278,18 @@ const handlePullRaroGuaranteed = () => {
     displayResults(results); 
 };
 
+const handleRevealAll = () => {
+    // Selecciona todas las tarjetas de Pokémon que aún están cubiertas
+    const coveredCards = document.querySelectorAll('#results-grid .pokemon-card.covered');
+    
+    coveredCards.forEach(card => {
+        card.classList.remove('covered');
+        card.classList.add('revealed');
+    });
+    
+    console.log(`¡Todos los ${coveredCards.length} resultados han sido revelados!`);
+};
+
 // !addtype / !removetype
 window.toggleType = (typeName) => { 
     const index = currentState.tipos_activos.indexOf(typeName);
@@ -308,20 +320,41 @@ const displayResults = (results) => {
     const grid = document.getElementById('results-grid');
     grid.innerHTML = ''; 
     
-    results.forEach(pokemon => {
+    results.forEach((pokemon , index) => {
         const resultDiv = document.createElement('div');
-        resultDiv.className = `pokemon-card ${pokemon.rareza}`; 
-        
+        resultDiv.className = `pokemon-card ${pokemon.rareza} covered`; 
+        resultDiv.dataset.index = index;
+        resultDiv.dataset.nombre = pokemon.nombre;
+        resultDiv.dataset.tipos = pokemon.tipos.join(' / ');
+        resultDiv.dataset.rareza = pokemon.rareza.toUpperCase();
         let masteryTag = '';
         if (pokemon.tipos.length > 1) {
-            masteryTag = '<span style="color: #6a0dad; font-weight: bold;">[DOBLE TIPO]</span>';
+            masteryTag = '<span class="mastery-tag">[DOBLE TIPO]</span>';
         }
-        
-        resultDiv.innerHTML = `
-            <strong>${pokemon.nombre}</strong> ${masteryTag}<br>
-            <small>Rareza: ${pokemon.rareza.toUpperCase()}</small><br>
-            <small>Tipo(s): ${pokemon.tipos.join(' / ')}</small>
+        const revealedContent = `
+            <div class="revealed-content">
+                <strong>${pokemon.nombre}</strong> ${masteryTag}<br>
+                <small>Rareza: ${pokemon.rareza.toUpperCase()}</small><br>
+                <small>Tipo(s): ${pokemon.tipos.join(' / ')}</small>
+            </div>
         `;
+        const coveredContent = `
+            <div class="covered-content">
+                <p><strong>RAREZA:</strong></p>
+                <p style="font-size: 1.2em; font-weight: bold;">${pokemon.rareza.toUpperCase()}</p>
+                <small style="margin-top: 5px; display: block;">¡Haz clic para revelar!</small>
+            </div>
+        `;
+
+        resultDiv.innerHTML = coveredContent + revealedContent;
+        
+        resultDiv.addEventListener('click', function() {
+            if (this.classList.contains('covered')) {
+                this.classList.remove('covered');
+                this.classList.add('revealed');
+                console.log(`Revelado: ${pokemon.nombre} (${pokemon.rareza})`);
+            }
+        });
         grid.appendChild(resultDiv);
     });
 };
@@ -380,4 +413,5 @@ window.onload = () => {
     document.getElementById('pull-legendario-guaranteed').addEventListener('click', handlePullLegendarioGuaranteed);
     document.getElementById('pull-raro-guaranteed').addEventListener('click', handlePullRaroGuaranteed);
     document.getElementById('clear-history-button').addEventListener('click', handleClearHistory);
+    document.getElementById('reveal-all-button').addEventListener('click', handleRevealAll);
 };
