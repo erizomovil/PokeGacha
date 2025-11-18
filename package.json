@@ -1,11 +1,13 @@
 {
-  "name": "pokemon-gacha-electron",
+  "name": "PixelGacha",
   "version": "1.0.0",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "package-win": "electron-packager . --overwrite --platform=win32 --arch=x64 --out=dist --prune=true --ignore=node_modules/electron --ignore=dist --executable-name=PixelGacha --icon=./assets/Gacha.ico"
   },
   "devDependencies": {
-    "electron": "^28.0.0"
+    "electron": "^28.0.0",
+    "electron-packager": "^17.1.2"
   }
 }

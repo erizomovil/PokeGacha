@@ -533,6 +533,21 @@
     {"nombre": "Meloetta", "tipos": ["Normal ⭐", "Psíquico 🧠"], "rareza":"legendario"},
     {"nombre": "Meloetta-Pirouette", "tipos": ["Normal ⭐", "Lucha 🥊"], "rareza":"legendario"},
     {"nombre": "Cyclizar", "tipos": ["Dragón 🐉", "Normal ⭐"], "rareza":"raro"},
-    {"nombre": "Indeedee", "tipos": ["Psíquico 🧠", "Normal ⭐"], "rareza":"comun"}
+    {"nombre": "Indeedee", "tipos": ["Psíquico 🧠", "Normal ⭐"], "rareza":"comun"},
+    {"nombre": "Terrakion", "tipos": ["Roca 🗿", "Lucha 🥊"], "rareza":"legendario"},
+    {"nombre": "Diancie", "tipos": ["Roca 🗿", "Hada ✨"], "rareza":"legendario"},
+    {"nombre": "Onix", "tipos": ["Roca 🗿", "Tierra ⛰️"], "rareza":"raro"},
+    {"nombre": "Larvitar", "tipos": ["Roca 🗿", "Tierra ⛰️"], "rareza":"raro"},
+    {"nombre": "Carbink", "tipos": ["Roca 🗿", "Hada ✨"], "rareza":"raro"},
+    {"nombre": "Minior", "tipos": ["Roca 🗿", "Volador 🕊️"], "rareza":"raro"},
+    {"nombre": "Kleavor", "tipos": ["Bicho 🐞", "Roca 🗿"], "rareza":"raro"},
+    {"nombre": "Geodude", "tipos": ["Roca 🗿", "Tierra ⛰️"], "rareza":"comun"},
+    {"nombre": "Glimmet", "tipos": ["Roca 🗿", "Veneno 💀"], "rareza":"comun"},
+    {"nombre": "Lunatone", "tipos": ["Roca 🗿", "Psíquico 🧠"], "rareza":"comun"},
+    {"nombre": "Solrock", "tipos": ["Roca 🗿", "Psíquico 🧠"], "rareza":"comun"},
+    {"nombre": "Rhyhorn", "tipos": ["Tierra ⛰️", "Roca 🗿"], "rareza":"comun"},
+    {"nombre": "Suckle", "tipos": ["Bicho 🐞", "Roca 🗿"], "rareza":"comun"},
+    {"nombre": "Aron", "tipos": ["Acero ⚙️", "Roca 🗿"], "rareza":"comun"},
+    {"nombre": "Dwebble", "tipos": ["Bicho 🐞", "Roca 🗿"], "rareza":"comun"}
   ]
 }

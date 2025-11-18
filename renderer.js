@@ -83,7 +83,6 @@ const performPull = (state, data, count) => {
         let pulledRarity = selectWeightedItem(rarities, weights);
         
         // 3. Aplicar Pity Duro (Garantías)
-        // [Lógica Pity, sin cambios]
         if (newState.pity_legendario_contador >= 90) { 
             pulledRarity = 'legendario'; 
         } else if (newState.pity_raro_contador >= 10) { 
@@ -92,11 +91,12 @@ const performPull = (state, data, count) => {
             }
         }
         
-        // 4. BUCLE DE BÚSQUEDA GARANTIZADA (Reroll de Tipo)
+        // --- INICIO: BUCLE DE BÚSQUEDA GARANTIZADA (Reroll de Tipo) ---
         let candidates = [];
         let targetTypeName = null;
         let attempts = 0;
-        const maxAttempts = 50; // Límite para evitar bucles infinitos por configuración imposible
+        const maxAttempts = 50; 
+        let pokemonFound = false;
         
         const activeTypesData = data.tipos_base.filter(t => newState.tipos_activos.includes(t.nombre));
         if (activeTypesData.length === 0) {
@@ -107,7 +107,7 @@ const performPull = (state, data, count) => {
         do {
             attempts++;
             
-            // a) Selección de Tipo Objetivo (Reroll aquí si es necesario)
+            // a) Selección de Tipo Objetivo
             targetTypeName = selectWeightedItem(
                 activeTypesData.map(t => t.nombre), 
                 activeTypesData.map(t => t.probabilidad_base)
@@ -135,10 +135,35 @@ const performPull = (state, data, count) => {
             // d) Aplicar Rareza (Filtro final)
             candidates = candidates.filter(p => p.rareza === pulledRarity);
 
-        } while (candidates.length === 0 && attempts < maxAttempts); // Bucle si la lista está vacía
+            // NUEVA LÓGICA DE DETECCIÓN DE DUPLICADO
+            if (candidates.length > 0) {
+                pokemonFound = true;
+                break; // Sale del bucle do...while
+            }
+            
+            // Si no se encuentra en el primer intento, se registra el duplicado y se resetea Pity Raro.
+            if (attempts === 1 && candidates.length === 0) {
+                 results.push({ 
+                    nombre: `Duplicado`, 
+                    tipos: [targetTypeName || 'N/A'],
+                    rareza: pulledRarity
+                });
+                
+                // *** CAMBIO SOLICITADO: Resetear Pity Raro en caso de duplicado ***
+                newState.pity_raro_contador = 0; 
+                // *****************************************************************
+                
+                break; // Sale del bucle do...while
+            }
+            
+
+        } while (attempts < maxAttempts); 
+        // --- FIN: BUCLE DE BÚSQUEDA GARANTIZADA ---
+
 
         // 5. Selección Final y Reset de Pity
-        if (candidates.length > 0) {
+        if (pokemonFound) {
+            // Caso: Se encontró un Pokémon 
             const pulledPokemon = candidates[Math.floor(Math.random() * candidates.length)];
             results.push(pulledPokemon);
             
@@ -153,14 +178,14 @@ const performPull = (state, data, count) => {
                 newState.pity_raro_contador = 0;
             }
 
-        } else {
-            // Este error solo debería ocurrir si la configuración es imposible
-            // incluso después de 50 intentos (ej: todos los Pokémon de esa rareza son de tipos inactivos).
+        } else if (attempts === maxAttempts && candidates.length === 0) {
+            // Caso: Error Crítico (solo si el bucle terminó por maxAttempts sin encontrar nada)
             results.push({ 
                 nombre: `Error Crítico: No se encontró Pokémon válido en ${maxAttempts} intentos.`, 
                 tipos: [targetTypeName || 'N/A'],
                 rareza: pulledRarity
             });
+            // NOTA: En este caso de error crítico, el Pity Raro NO se resetea.
         }
     }
     
@@ -290,6 +315,45 @@ const handleRevealAll = () => {
     console.log(`¡Todos los ${coveredCards.length} resultados han sido revelados!`);
 };
 
+const handleToggleAllTypes = () => {
+    // Si hay tipos activos, los desactivamos todos. Si no hay, los activamos todos.
+    const allTypesNames = POKEMON_DATA.tipos_base.map(t => t.nombre);
+    
+    if (currentState.tipos_activos.length > 0) {
+        // Desactivar todos
+        currentState.tipos_activos = [];
+        // Al desactivar un tipo, su maestría también se debe desactivar
+        currentState.tipos_con_maestria = []; 
+        console.log("Todos los tipos han sido desactivados.");
+    } else {
+        // Activar todos
+        currentState.tipos_activos = allTypesNames;
+        console.log("Todos los tipos han sido activados.");
+    }
+    
+    saveState();
+};
+
+// Nueva función para Activar/Desactivar todas las Maestrías
+const handleToggleAllMastery = () => {
+    const activeTypes = currentState.tipos_activos;
+    
+    if (currentState.tipos_con_maestria.length > 0) {
+        // Desactivar todas las maestrías
+        currentState.tipos_con_maestria = [];
+        console.log("Todas las maestrías han sido desactivadas.");
+    } else if (activeTypes.length > 0) {
+        // Activar maestría en todos los tipos activos
+        currentState.tipos_con_maestria = [...activeTypes]; // Copiar los activos
+        console.log("Maestría activada en todos los tipos activos.");
+    } else {
+        alert("¡No hay tipos activos para aplicar la Maestría!");
+        return;
+    }
+    
+    saveState();
+};
+
 // !addtype / !removetype
 window.toggleType = (typeName) => { 
     const index = currentState.tipos_activos.indexOf(typeName);
@@ -414,4 +478,6 @@ window.onload = () => {
     document.getElementById('pull-raro-guaranteed').addEventListener('click', handlePullRaroGuaranteed);
     document.getElementById('clear-history-button').addEventListener('click', handleClearHistory);
     document.getElementById('reveal-all-button').addEventListener('click', handleRevealAll);
+    document.getElementById('toggle-all-types').addEventListener('click', handleToggleAllTypes);
+    document.getElementById('toggle-all-mastery').addEventListener('click', handleToggleAllMastery);
 };

@@ -1,89 +1,211 @@
 {
-  "pity_legendario_contador": 20,
-  "pity_raro_contador": 5,
+  "pity_legendario_contador": 22,
+  "pity_raro_contador": 2,
   "tipos_activos": [
-    "Roca 🗿"
+    "Fuego 🔥",
+    "Agua 💧",
+    "Planta 🌿",
+    "Eléctrico ⚡",
+    "Volador 🕊️",
+    "Tierra ⛰️",
+    "Normal ⭐",
+    "Hielo ❄️",
+    "Lucha 🥊",
+    "Veneno 💀",
+    "Psíquico 🧠",
+    "Bicho 🐞",
+    "Roca 🗿",
+    "Fantasma 👻",
+    "Siniestro 🌑",
+    "Acero ⚙️",
+    "Hada ✨"
   ],
   "tipos_con_maestria": [
-    "Roca 🗿"
+    "Volador 🕊️"
   ],
   "resultados_previos": [
     {
-      "nombre": "Binacle",
+      "nombre": "Mareep",
       "tipos": [
-        "Roca 🗿",
-        "Agua 💧"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Corsola",
-      "tipos": [
-        "Agua 💧",
-        "Roca 🗿"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Binacle",
-      "tipos": [
-        "Roca 🗿",
-        "Agua 💧"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Klawf",
-      "tipos": [
-        "Roca 🗿"
-      ],
-      "rareza": "raro"
-    },
-    {
-      "nombre": "Relicanth",
-      "tipos": [
-        "Agua 💧",
-        "Roca 🗿"
-      ],
-      "rareza": "raro"
-    },
-    {
-      "nombre": "Geodude-alola",
-      "tipos": [
-        "Roca 🗿",
         "Eléctrico ⚡"
       ],
       "rareza": "comun"
     },
     {
-      "nombre": "Binacle",
+      "nombre": "Yamask",
       "tipos": [
-        "Roca 🗿",
+        "Fantasma 👻"
+      ],
+      "rareza": "comun"
+    },
+    {
+      "nombre": "Patrat",
+      "tipos": [
+        "Normal ⭐"
+      ],
+      "rareza": "comun"
+    },
+    {
+      "nombre": "Vullaby",
+      "tipos": [
+        "Siniestro 🌑",
+        "Volador 🕊️"
+      ],
+      "rareza": "comun"
+    },
+    {
+      "nombre": "Makuhita",
+      "tipos": [
+        "Lucha 🥊"
+      ],
+      "rareza": "comun"
+    },
+    {
+      "nombre": "Nosepass",
+      "tipos": [
+        "Roca 🗿"
+      ],
+      "rareza": "comun"
+    },
+    {
+      "nombre": "Bouffalant",
+      "tipos": [
+        "Normal ⭐"
+      ],
+      "rareza": "comun"
+    },
+    {
+      "nombre": "Togepi",
+      "tipos": [
+        "Hada ✨"
+      ],
+      "rareza": "raro"
+    },
+    {
+      "nombre": "Finizen",
+      "tipos": [
         "Agua 💧"
       ],
       "rareza": "comun"
     },
     {
-      "nombre": "Corsola",
+      "nombre": "Blitzle",
       "tipos": [
-        "Agua 💧",
-        "Roca 🗿"
+        "Eléctrico ⚡"
       ],
       "rareza": "comun"
     },
     {
-      "nombre": "Corsola",
+      "nombre": "Ledyba",
       "tipos": [
-        "Agua 💧",
-        "Roca 🗿"
+        "Bicho 🐞",
+        "Volador 🕊️"
       ],
       "rareza": "comun"
     },
     {
-      "nombre": "Growlithe-hisui",
+      "nombre": "Pampour",
+      "tipos": [
+        "Agua 💧"
+      ],
+      "rareza": "comun"
+    },
+    {
+      "nombre": "Gothita",
+      "tipos": [
+        "Psíquico 🧠"
+      ],
+      "rareza": "comun"
+    },
+    {
+      "nombre": "Cufant",
+      "tipos": [
+        "Acero ⚙️"
+      ],
+      "rareza": "comun"
+    },
+    {
+      "nombre": "Nickit",
+      "tipos": [
+        "Siniestro 🌑"
+      ],
+      "rareza": "comun"
+    },
+    {
+      "nombre": "Klink",
+      "tipos": [
+        "Acero ⚙️"
+      ],
+      "rareza": "comun"
+    },
+    {
+      "nombre": "Nidoran♀",
+      "tipos": [
+        "Veneno 💀"
+      ],
+      "rareza": "comun"
+    },
+    {
+      "nombre": "Spritzee",
+      "tipos": [
+        "Hada ✨"
+      ],
+      "rareza": "raro"
+    },
+    {
+      "nombre": "Rellor",
+      "tipos": [
+        "Bicho 🐞"
+      ],
+      "rareza": "comun"
+    },
+    {
+      "nombre": "Glameow",
+      "tipos": [
+        "Normal ⭐"
+      ],
+      "rareza": "comun"
+    },
+    {
+      "nombre": "Oricorio-apasionado",
       "tipos": [
         "Fuego 🔥",
-        "Roca 🗿"
+        "Volador 🕊️"
+      ],
+      "rareza": "comun"
+    },
+    {
+      "nombre": "Cubone",
+      "tipos": [
+        "Tierra ⛰️"
+      ],
+      "rareza": "comun"
+    },
+    {
+      "nombre": "Cubchoo",
+      "tipos": [
+        "Hielo ❄️"
+      ],
+      "rareza": "comun"
+    },
+    {
+      "nombre": "Milcery",
+      "tipos": [
+        "Hada ✨"
+      ],
+      "rareza": "comun"
+    },
+    {
+      "nombre": "Misdreavus",
+      "tipos": [
+        "Fantasma 👻"
+      ],
+      "rareza": "comun"
+    },
+    {
+      "nombre": "Purrloin",
+      "tipos": [
+        "Siniestro 🌑"
       ],
       "rareza": "comun"
     },
@@ -95,95 +217,120 @@
       "rareza": "comun"
     },
     {
-      "nombre": "Corsola",
+      "nombre": "Regice",
       "tipos": [
-        "Agua 💧",
-        "Roca 🗿"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Growlithe-hisui",
-      "tipos": [
-        "Fuego 🔥",
-        "Roca 🗿"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Growlithe-hisui",
-      "tipos": [
-        "Fuego 🔥",
-        "Roca 🗿"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Growlithe-hisui",
-      "tipos": [
-        "Fuego 🔥",
-        "Roca 🗿"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Growlithe-hisui",
-      "tipos": [
-        "Fuego 🔥",
-        "Roca 🗿"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Growlithe-hisui",
-      "tipos": [
-        "Fuego 🔥",
-        "Roca 🗿"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Corsola",
-      "tipos": [
-        "Agua 💧",
-        "Roca 🗿"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Growlithe-hisui",
-      "tipos": [
-        "Fuego 🔥",
-        "Roca 🗿"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Relicanth",
-      "tipos": [
-        "Agua 💧",
-        "Roca 🗿"
-      ],
-      "rareza": "raro"
-    },
-    {
-      "nombre": "Bombirdier",
-      "tipos": [
-        "Volador 🕊️",
-        "Siniestro 🌑"
-      ],
-      "rareza": "raro"
-    },
-    {
-      "nombre": "Enamorus",
-      "tipos": [
-        "Hada ✨",
-        "Volador 🕊️"
+        "Hielo ❄️"
       ],
       "rareza": "legendario"
     },
     {
-      "nombre": "Pidove",
+      "nombre": "Skiddo",
+      "tipos": [
+        "Planta 🌿"
+      ],
+      "rareza": "comun"
+    },
+    {
+      "nombre": "Cubchoo",
+      "tipos": [
+        "Hielo ❄️"
+      ],
+      "rareza": "comun"
+    },
+    {
+      "nombre": "Espurr",
+      "tipos": [
+        "Psíquico 🧠"
+      ],
+      "rareza": "comun"
+    },
+    {
+      "nombre": "Shuppet",
+      "tipos": [
+        "Fantasma 👻"
+      ],
+      "rareza": "comun"
+    },
+    {
+      "nombre": "Klink",
+      "tipos": [
+        "Acero ⚙️"
+      ],
+      "rareza": "comun"
+    },
+    {
+      "nombre": "Murkrow",
+      "tipos": [
+        "Siniestro 🌑",
+        "Volador 🕊️"
+      ],
+      "rareza": "comun"
+    },
+    {
+      "nombre": "Duskull",
+      "tipos": [
+        "Fantasma 👻"
+      ],
+      "rareza": "comun"
+    },
+    {
+      "nombre": "Darumaka",
+      "tipos": [
+        "Fuego 🔥"
+      ],
+      "rareza": "comun"
+    },
+    {
+      "nombre": "Cubchoo",
+      "tipos": [
+        "Hielo ❄️"
+      ],
+      "rareza": "comun"
+    },
+    {
+      "nombre": "Drilbur",
+      "tipos": [
+        "Tierra ⛰️"
+      ],
+      "rareza": "comun"
+    },
+    {
+      "nombre": "Corsola Galar",
+      "tipos": [
+        "Fantasma 👻"
+      ],
+      "rareza": "raro"
+    },
+    {
+      "nombre": "Magby",
+      "tipos": [
+        "Fuego 🔥"
+      ],
+      "rareza": "comun"
+    },
+    {
+      "nombre": "Clefairy",
+      "tipos": [
+        "Hada ✨"
+      ],
+      "rareza": "comun"
+    },
+    {
+      "nombre": "Abra",
+      "tipos": [
+        "Psíquico 🧠"
+      ],
+      "rareza": "comun"
+    },
+    {
+      "nombre": "Klink",
+      "tipos": [
+        "Acero ⚙️"
+      ],
+      "rareza": "comun"
+    },
+    {
+      "nombre": "Hoothoot",
       "tipos": [
         "Normal ⭐",
         "Volador 🕊️"
@@ -191,200 +338,46 @@
       "rareza": "comun"
     },
     {
-      "nombre": "Spearow",
+      "nombre": "Darumaka Galar",
       "tipos": [
-        "Normal ⭐",
-        "Volador 🕊️"
+        "Hielo ❄️"
       ],
       "rareza": "comun"
     },
     {
-      "nombre": "Oricorio-plácido",
+      "nombre": "Rattata",
       "tipos": [
-        "Psíquico 🧠",
-        "Volador 🕊️"
+        "Normal ⭐"
       ],
       "rareza": "comun"
     },
     {
-      "nombre": "Oricorio-refinado",
+      "nombre": "Surkern",
       "tipos": [
-        "Fantasma 👻",
-        "Volador 🕊️"
+        "Planta 🌿"
       ],
       "rareza": "comun"
     },
     {
-      "nombre": "Pidove",
+      "nombre": "Skiddo",
       "tipos": [
-        "Normal ⭐",
-        "Volador 🕊️"
+        "Planta 🌿"
       ],
       "rareza": "comun"
     },
     {
-      "nombre": "Combee",
+      "nombre": "Duplicado",
       "tipos": [
-        "Bicho 🐞",
-        "Volador 🕊️"
+        "Tierra ⛰️"
+      ],
+      "rareza": "raro"
+    },
+    {
+      "nombre": "Poochyena",
+      "tipos": [
+        "Siniestro 🌑"
       ],
       "rareza": "comun"
-    },
-    {
-      "nombre": "Flamigo",
-      "tipos": [
-        "Volador 🕊️",
-        "Lucha 🥊"
-      ],
-      "rareza": "raro"
-    },
-    {
-      "nombre": "Zubat",
-      "tipos": [
-        "Veneno 💀",
-        "Volador 🕊️"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Error Crítico: No se encontró Pokémon válido en 50 intentos.",
-      "tipos": [
-        "Volador 🕊️"
-      ],
-      "rareza": "raro"
-    },
-    {
-      "nombre": "Error Crítico: No se encontró Pokémon válido en 50 intentos.",
-      "tipos": [
-        "Volador 🕊️"
-      ],
-      "rareza": "raro"
-    },
-    {
-      "nombre": "Error Crítico: No se encontró Pokémon válido en 50 intentos.",
-      "tipos": [
-        "Volador 🕊️"
-      ],
-      "rareza": "raro"
-    },
-    {
-      "nombre": "Error Crítico: No se encontró Pokémon válido en 50 intentos.",
-      "tipos": [
-        "Volador 🕊️"
-      ],
-      "rareza": "raro"
-    },
-    {
-      "nombre": "Error Crítico: No se encontró Pokémon válido en 50 intentos.",
-      "tipos": [
-        "Volador 🕊️"
-      ],
-      "rareza": "raro"
-    },
-    {
-      "nombre": "Error Crítico: No se encontró Pokémon válido en 50 intentos.",
-      "tipos": [
-        "Volador 🕊️"
-      ],
-      "rareza": "raro"
-    },
-    {
-      "nombre": "Error Crítico: No se encontró Pokémon válido en 50 intentos.",
-      "tipos": [
-        "Volador 🕊️"
-      ],
-      "rareza": "raro"
-    },
-    {
-      "nombre": "Error Crítico: No se encontró Pokémon válido en 50 intentos.",
-      "tipos": [
-        "Volador 🕊️"
-      ],
-      "rareza": "raro"
-    },
-    {
-      "nombre": "Error Crítico: No se encontró Pokémon válido en 50 intentos.",
-      "tipos": [
-        "Volador 🕊️"
-      ],
-      "rareza": "raro"
-    },
-    {
-      "nombre": "Error Crítico: No se encontró Pokémon válido en 50 intentos.",
-      "tipos": [
-        "Volador 🕊️"
-      ],
-      "rareza": "raro"
-    },
-    {
-      "nombre": "Error Crítico: No se encontró Pokémon válido en 50 intentos.",
-      "tipos": [
-        "Volador 🕊️"
-      ],
-      "rareza": "raro"
-    },
-    {
-      "nombre": "Error Crítico: No se encontró Pokémon válido en 50 intentos.",
-      "tipos": [
-        "Volador 🕊️"
-      ],
-      "rareza": "raro"
-    },
-    {
-      "nombre": "Error Crítico: No se encontró Pokémon válido en 50 intentos.",
-      "tipos": [
-        "Volador 🕊️"
-      ],
-      "rareza": "raro"
-    },
-    {
-      "nombre": "Error Crítico: No se encontró Pokémon válido en 50 intentos.",
-      "tipos": [
-        "Volador 🕊️"
-      ],
-      "rareza": "raro"
-    },
-    {
-      "nombre": "Error Crítico: No se encontró Pokémon válido en 50 intentos.",
-      "tipos": [
-        "Volador 🕊️"
-      ],
-      "rareza": "raro"
-    },
-    {
-      "nombre": "Error Crítico: No se encontró Pokémon válido en 50 intentos.",
-      "tipos": [
-        "Volador 🕊️"
-      ],
-      "rareza": "raro"
-    },
-    {
-      "nombre": "Error Crítico: No se encontró Pokémon válido en 50 intentos.",
-      "tipos": [
-        "Volador 🕊️"
-      ],
-      "rareza": "raro"
-    },
-    {
-      "nombre": "Error Crítico: No se encontró Pokémon válido en 50 intentos.",
-      "tipos": [
-        "Volador 🕊️"
-      ],
-      "rareza": "raro"
-    },
-    {
-      "nombre": "Error Crítico: No se encontró Pokémon válido en 50 intentos.",
-      "tipos": [
-        "Volador 🕊️"
-      ],
-      "rareza": "raro"
-    },
-    {
-      "nombre": "Error Crítico: No se encontró Pokémon válido en 50 intentos.",
-      "tipos": [
-        "Volador 🕊️"
-      ],
-      "rareza": "raro"
     }
   ]
 }
