@@ -15,7 +15,12 @@ const loadState = () => {
     try {
         if (fs.existsSync(SAVE_FILE)) {
             const data = fs.readFileSync(SAVE_FILE, 'utf8');
-            return JSON.parse(data);
+            const loadedState = JSON.parse(data);
+            // Aseguramos que 'coleccion_nombres' exista, incluso si el archivo de guardado es antiguo
+            return {
+                ...loadedState,
+                coleccion_nombres: loadedState.coleccion_nombres || [] // 👈 CAMBIO AQUÍ
+            };
         }
         // Estado por defecto CON DOS PITYS
         return {
@@ -23,7 +28,8 @@ const loadState = () => {
             pity_raro_contador: 0,
             tipos_activos: POKEMON_DATA.tipos_base.map(t => t.nombre),
             tipos_con_maestria: [],
-            resultados_previos: []
+            resultados_previos: [],
+            coleccion_nombres: [] // 👈 CAMBIO AQUÍ: Array para la colección
         };
     } catch (e) {
         console.error("Error cargando estado. Usando valores por defecto.", e);
@@ -32,7 +38,8 @@ const loadState = () => {
             pity_raro_contador: 0, 
             tipos_activos: POKEMON_DATA.tipos_base.map(t => t.nombre), 
             tipos_con_maestria: [], 
-            resultados_previos: [] 
+            resultados_previos: [],
+            coleccion_nombres: [] // 👈 CAMBIO AQUÍ
         }; 
     }
 };
@@ -165,8 +172,19 @@ const performPull = (state, data, count) => {
         if (pokemonFound) {
             // Caso: Se encontró un Pokémon 
             const pulledPokemon = candidates[Math.floor(Math.random() * candidates.length)];
-            results.push(pulledPokemon);
+            //results.push(pulledPokemon);
+            const isDuplicate = newState.coleccion_nombres.includes(pulledPokemon.nombre);
+            if (!isDuplicate) {
+                // Es nuevo, añádelo a la colección
+                newState.coleccion_nombres.push(pulledPokemon.nombre);
+            }
             
+            // Crear el objeto resultado, añadiendo la propiedad 'esDuplicado'
+            const finalResult = { 
+                ...pulledPokemon,
+                esDuplicado: isDuplicate // 👈 Nuevo campo
+            };
+            results.push(finalResult);
             // Si sale Raro: Resetea Pity Raro
             if (pulledRarity === 'raro') { 
                 newState.pity_raro_contador = 0;
@@ -395,9 +413,17 @@ const displayResults = (results) => {
         if (pokemon.tipos.length > 1) {
             masteryTag = '<span class="mastery-tag">[DOBLE TIPO]</span>';
         }
+        let duplicateTag = '';
+        if (pokemon.esDuplicado) { // 👈 Comprueba la bandera añadida en performPull
+            duplicateTag = '<br><span class="duplicate-tag" style="color: red; font-weight: bold; font-size: 1.1em;">Duplicado</span>'; 
+        }
+        // Si el resultado es el caso especial de "Duplicado" (fallo de búsqueda de tipo)
+        if (pokemon.nombre === 'Duplicado') { 
+            duplicateTag = '<br><span style="color: blue; font-weight: bold; font-size: 1.1em;">Falló Búsqueda (Reset Pity Raro)</span>';
+        }
         const revealedContent = `
             <div class="revealed-content">
-                <strong>${pokemon.nombre}</strong> ${masteryTag}<br>
+                <strong>${pokemon.nombre}</strong> ${masteryTag}${duplicateTag}<br>
                 <small>Rareza: ${pokemon.rareza.toUpperCase()}</small><br>
                 <small>Tipo(s): ${pokemon.tipos.join(' / ')}</small>
             </div>
@@ -416,7 +442,7 @@ const displayResults = (results) => {
             if (this.classList.contains('covered')) {
                 this.classList.remove('covered');
                 this.classList.add('revealed');
-                console.log(`Revelado: ${pokemon.nombre} (${pokemon.rareza})`);
+                console.log(`Revelado: ${pokemon.nombre} (${pokemon.rareza}) - Duplicado: ${!!pokemon.esDuplicado}`);
             }
         });
         grid.appendChild(resultDiv);

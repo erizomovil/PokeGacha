@@ -1,6 +1,6 @@
 {
-  "pity_legendario_contador": 22,
-  "pity_raro_contador": 2,
+  "pity_legendario_contador": 46,
+  "pity_raro_contador": 3,
   "tipos_activos": [
     "Fuego 🔥",
     "Agua 💧",
@@ -23,361 +23,204 @@
   "tipos_con_maestria": [
     "Volador 🕊️"
   ],
-  "resultados_previos": [
-    {
-      "nombre": "Mareep",
-      "tipos": [
-        "Eléctrico ⚡"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Yamask",
-      "tipos": [
-        "Fantasma 👻"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Patrat",
-      "tipos": [
-        "Normal ⭐"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Vullaby",
-      "tipos": [
-        "Siniestro 🌑",
-        "Volador 🕊️"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Makuhita",
-      "tipos": [
-        "Lucha 🥊"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Nosepass",
-      "tipos": [
-        "Roca 🗿"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Bouffalant",
-      "tipos": [
-        "Normal ⭐"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Togepi",
-      "tipos": [
-        "Hada ✨"
-      ],
-      "rareza": "raro"
-    },
-    {
-      "nombre": "Finizen",
-      "tipos": [
-        "Agua 💧"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Blitzle",
-      "tipos": [
-        "Eléctrico ⚡"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Ledyba",
-      "tipos": [
-        "Bicho 🐞",
-        "Volador 🕊️"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Pampour",
-      "tipos": [
-        "Agua 💧"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Gothita",
-      "tipos": [
-        "Psíquico 🧠"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Cufant",
-      "tipos": [
-        "Acero ⚙️"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Nickit",
-      "tipos": [
-        "Siniestro 🌑"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Klink",
-      "tipos": [
-        "Acero ⚙️"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Nidoran♀",
-      "tipos": [
-        "Veneno 💀"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Spritzee",
-      "tipos": [
-        "Hada ✨"
-      ],
-      "rareza": "raro"
-    },
-    {
-      "nombre": "Rellor",
-      "tipos": [
-        "Bicho 🐞"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Glameow",
-      "tipos": [
-        "Normal ⭐"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Oricorio-apasionado",
-      "tipos": [
-        "Fuego 🔥",
-        "Volador 🕊️"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Cubone",
-      "tipos": [
-        "Tierra ⛰️"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Cubchoo",
-      "tipos": [
-        "Hielo ❄️"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Milcery",
-      "tipos": [
-        "Hada ✨"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Misdreavus",
-      "tipos": [
-        "Fantasma 👻"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Purrloin",
-      "tipos": [
-        "Siniestro 🌑"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Roggenrola",
-      "tipos": [
-        "Roca 🗿"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Regice",
-      "tipos": [
-        "Hielo ❄️"
-      ],
-      "rareza": "legendario"
-    },
-    {
-      "nombre": "Skiddo",
-      "tipos": [
-        "Planta 🌿"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Cubchoo",
-      "tipos": [
-        "Hielo ❄️"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Espurr",
-      "tipos": [
-        "Psíquico 🧠"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Shuppet",
-      "tipos": [
-        "Fantasma 👻"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Klink",
-      "tipos": [
-        "Acero ⚙️"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Murkrow",
-      "tipos": [
-        "Siniestro 🌑",
-        "Volador 🕊️"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Duskull",
-      "tipos": [
-        "Fantasma 👻"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Darumaka",
-      "tipos": [
-        "Fuego 🔥"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Cubchoo",
-      "tipos": [
-        "Hielo ❄️"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Drilbur",
-      "tipos": [
-        "Tierra ⛰️"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Corsola Galar",
-      "tipos": [
-        "Fantasma 👻"
-      ],
-      "rareza": "raro"
-    },
-    {
-      "nombre": "Magby",
-      "tipos": [
-        "Fuego 🔥"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Clefairy",
-      "tipos": [
-        "Hada ✨"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Abra",
-      "tipos": [
-        "Psíquico 🧠"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Klink",
-      "tipos": [
-        "Acero ⚙️"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Hoothoot",
-      "tipos": [
-        "Normal ⭐",
-        "Volador 🕊️"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Darumaka Galar",
-      "tipos": [
-        "Hielo ❄️"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Rattata",
-      "tipos": [
-        "Normal ⭐"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Surkern",
-      "tipos": [
-        "Planta 🌿"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Skiddo",
-      "tipos": [
-        "Planta 🌿"
-      ],
-      "rareza": "comun"
-    },
-    {
-      "nombre": "Duplicado",
-      "tipos": [
-        "Tierra ⛰️"
-      ],
-      "rareza": "raro"
-    },
-    {
-      "nombre": "Poochyena",
-      "tipos": [
-        "Siniestro 🌑"
-      ],
-      "rareza": "comun"
-    }
+  "resultados_previos": [],
+  "coleccion_nombres": [
+    "Machop",
+    "Pancham",
+    "Clobbopus",
+    "Eiscue",
+    "Skarmory",
+    "Shroomish",
+    "Trapinch",
+    "Poliwag",
+    "Growlithe",
+    "Cherubi",
+    "Bergmite",
+    "Yanma",
+    "Drilbur",
+    "Karrablast",
+    "Yamask",
+    "Blipbug",
+    "Blitzle",
+    "Ludvisc",
+    "Poochyena",
+    "Klink",
+    "Pikipek",
+    "Wiglett",
+    "Meowth Galar",
+    "Seviper",
+    "Milcery",
+    "Oricorio-refinado",
+    "Pansear",
+    "Pyukumuku",
+    "Mudbray",
+    "Slakoth",
+    "Slugma",
+    "Maschiff",
+    "Bonsly",
+    "Meowth Alola",
+    "Fidough",
+    "Misdreavus",
+    "Vanillite",
+    "Torkoal",
+    "Rookidee",
+    "Clauncher",
+    "Voltorb",
+    "Phanpy",
+    "Combee",
+    "Oricorio-animado",
+    "Yamper",
+    "Skiddo",
+    "Popplio",
+    "Cubone",
+    "Nosepass",
+    "Darumaka",
+    "Sandshrew",
+    "Wurmple",
+    "Natu",
+    "Snorunt",
+    "Crabrawler",
+    "Orthworm",
+    "Komala",
+    "Rellor",
+    "Taillow",
+    "Groudon",
+    "Pansage",
+    "Cubchoo",
+    "Comfey",
+    "Chewtle",
+    "Drifloon",
+    "Hoppip",
+    "Munna",
+    "Oshawott",
+    "Rockruff",
+    "Petilil",
+    "Flabébé",
+    "Clefairy",
+    "Flittle",
+    "Zigzagoon",
+    "Corsola Galar",
+    "Stantler",
+    "Darumaka Galar",
+    "Skwovet",
+    "Rolycoly",
+    "Purrloin",
+    "Greavard",
+    "Abra",
+    "Hoothoot",
+    "Espurr",
+    "Wailmer",
+    "Turtwig",
+    "Tauros Paldea",
+    "Silicobra",
+    "Scatterbug",
+    "Froakie",
+    "Timburr",
+    "Sigilyph",
+    "Treecko",
+    "Bounsweet",
+    "Nidoran♀",
+    "Fletchling",
+    "Hatenna",
+    "Lillipup",
+    "Absol",
+    "Vulpix",
+    "Nidoran♂",
+    "Tangela",
+    "Basculin",
+    "Shuppet",
+    "Chimchar",
+    "Zangoose",
+    "Pineco",
+    "Surkern",
+    "Cryogonal",
+    "Burmy",
+    "Mareep",
+    "Diglett",
+    "Finneon",
+    "Tropius",
+    "Gossifleur",
+    "Sentret",
+    "Wishiwashi",
+    "Farfetch’d Galar",
+    "Swirlix",
+    "Stonjourner",
+    "Trubbish",
+    "Squawkabilly",
+    "Cufant",
+    "Gulpin",
+    "Riolu",
+    "Solosis",
+    "Klawf",
+    "Nacli",
+    "Snubbull",
+    "Grimer",
+    "Sobble",
+    "Mankey",
+    "Vulpix Alola",
+    "Tarountula",
+    "Cacnea",
+    "Ekans",
+    "Kricketot",
+    "Regice",
+    "Wooloo",
+    "Furfrou",
+    "Heracross",
+    "Starly",
+    "Goldeen",
+    "Volbeat",
+    "Plusle",
+    "Feebas",
+    "Pampour",
+    "Duskull",
+    "Hippopotas",
+    "Tadbulb",
+    "Doduo",
+    "Elekid",
+    "Throh",
+    "Bidoof",
+    "Delibird",
+    "Minun",
+    "Ponyta Galar",
+    "Nickit",
+    "Drowzee",
+    "Zamazenta",
+    "Patrat",
+    "Ducklett",
+    "Smeargle",
+    "Mienfoo",
+    "Rowlet",
+    "Pincurchin",
+    "Lechonk",
+    "Tandemaus",
+    "Scyther",
+    "Cetoddle",
+    "Nymble",
+    "Spoink",
+    "Ogerpon",
+    "Tympole",
+    "Kecleon",
+    "Caterpie",
+    "Hitmontop",
+    "Electrike",
+    "Krabby",
+    "Yungoos",
+    "Woobat",
+    "Rufflet",
+    "Pichu",
+    "Bunnelby",
+    "Hitmonchan",
+    "Roggenrola",
+    "Grubbin",
+    "Unown",
+    "Scorbunny",
+    "Raikou",
+    "Capsakid",
+    "Tauros",
+    "Magby",
+    "Cyndaquil",
+    "Magikarp",
+    "Zorua",
+    "Sprigatito"
   ]
 }
